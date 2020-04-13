@@ -14,7 +14,7 @@ function Home() {
                     </Col>
                 </Row>
                 <Row className="justify-content-center">
-                    <Col className="col-12 col-md-8">
+                    <Col className="col-12 col-md-8 text-center">
                         <img src={require('../img/mugshot/berton-strong.png')} alt="Berton Strong" className="florida__mugshot--img florida__mugshot--berton-strong rounded-circle" />
 
                         <img src={require('../img/mugshot/ben-jenkins.png')} alt="Ben Jenkins" className="florida__mugshot--img florida__mugshot--ben-jenkins rounded-circle" />
