@@ -5,10 +5,21 @@ $red: #DB5461;
 $blue: #06213C;
 $sand: #ECD0B8;
 
+/* fonts */
+$rokkit: 'Rokkitt', serif;;
+$ubuntu: 'Ubuntu Mono', monospace;;
+
 
 html, body, #root
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
+  font-family: $ubuntu;
+
+h1, h2, h3, h4, h5, h6
+  font-family: $rokkit;
+
+p, span
+  font-family: $ubuntu;
 
 .red
   color: $red;
@@ -23,14 +34,11 @@ html, body, #root
       color: #333333;
       min-height: 100%;
       height: auto;
-      // @include media-breakpoint-down(sm)
-      //   background-image: url('./img/florida.png'), url('./img/seamless-1807376.jpg');
-      //   background-size: 75% auto, contain;
-      //   background-repeat: no-repeat, repeat;
-      //   background-position: center center;
     &--title
       background-color: $red;
       color: #FFFFFF;
+      @include media-breakpoint-only(xs)
+        font-size: 28px;
     &--instructions
       font-weight: bold;
     &--state
