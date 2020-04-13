@@ -1,5 +1,38 @@
-body 
-  font-size: 64px;
+@import "~bootstrap/scss/bootstrap";
+
+html, body, #root
+    height: 100%;
+    margin: 0;
+
+.florida
+  &__home
+    &--container
+      background-color: #d4b9a5;
+      background-image: url('./img/seamless-1807376.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #333333;
+    &--content
+      background-image: url('./img/florida.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      z-index: 1;
+  &__mugshot
+    &--container
+      z-index: 9;
+    &--img
+      width: 100px;
+      height: 100px;
+      transition: width 0.5s, height 0.5s
+      -webkit-box-shadow: 5px 5px 5px -4px rgba(102,102,102,0.3);
+      -moz-box-shadow: 5px 5px 5px -4px rgba(102,102,102,0.3);
+      box-shadow: 5px 5px 5px -4px rgba(102,102,102,0.3);
+      &:hover
+        width: 125px;
+        height: 125px;
+
   
 @media (prefers-reduced-motion: no-preference) 
   .App-logo 
