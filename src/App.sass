@@ -4,6 +4,8 @@
 $red: #DB5461;
 $blue: #06213C;
 $sand: #ECD0B8;
+$black: #333333;
+$purple: #CC76A1;
 
 /* fonts */
 $rokkit: 'Rokkitt', serif;;
@@ -31,7 +33,7 @@ p, span
       background-image: url('./img/seamless-1807376.jpg');
       background-size: contain;
       background-repeat: repeat;
-      color: #333333;
+      color: $black;
       min-height: 100%;
       height: auto;
     &--title
@@ -46,6 +48,16 @@ p, span
         display: none;
       &--mobile
         width: 25%;
+    &--attr
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      a
+        color: $black;
+        text-decoration: underline;
+        transition: all 0.3s ease;
+        &:hover
+          color: $purple;
   &__mugshot
     &--container
       z-index: 9;
@@ -101,6 +113,7 @@ p, span
     &--donald-schmidt 
       top: 70%;
       left: 90%;
+
 
   
 @media (prefers-reduced-motion: no-preference) 

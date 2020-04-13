@@ -33,8 +33,12 @@ function Home() {
 
                         <img src={require('../img/florida.png')} className="florida__home--state w-100" alt="Florida" />
                     </Col>
+                    
                 </Row>
             </Container>
+            <div className="florida__home--attr text-right mr-3 mb-3">
+                <span className="red">*</span>Photos by <a href="https://generated.photos" target="_blank" rel="noopener noreferrer">Generated Photos</a>
+            </div>
         </div>
     );
 }
