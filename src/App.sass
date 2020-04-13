@@ -1,34 +1,43 @@
 @import "~bootstrap/scss/bootstrap";
 
+/* color scheme */
+$red: #DB5461;
+$blue: #06213C;
+$sand: #ECD0B8;
+
+
 html, body, #root
     height: 100%;
     margin: 0;
 
+.red
+  color: $red;
+
 .florida
   &__home
     &--container
-      background-color: #d4b9a5;
+      background-color: $sand;
       background-image: url('./img/seamless-1807376.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
+      background-size: contain;
+      background-repeat: repeat;
       color: #333333;
       min-height: 100%;
       height: auto;
+      // @include media-breakpoint-down(sm)
+      //   background-image: url('./img/florida.png'), url('./img/seamless-1807376.jpg');
+      //   background-size: 75% auto, contain;
+      //   background-repeat: no-repeat, repeat;
+      //   background-position: center center;
     &--title
-      background-color: #222222;
+      background-color: $red;
       color: #FFFFFF;
     &--instructions
       font-weight: bold;
-    &--content
-      @include media-breakpoint-down(sm)
-        background-image: url('./img/florida.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        height: 100%;
     &--state
       @include media-breakpoint-down(sm)
         display: none;
+      &--mobile
+        width: 25%;
   &__mugshot
     &--container
       z-index: 9;

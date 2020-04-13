@@ -7,9 +7,10 @@ function Home() {
         <div className="florida__home--container">
             <Container className="florida__home--content">
                 <Row>
-                    <Col className="text-center py-5 mb-3">
+                    <Col className="text-center py-md-5 mb-3">
+                    <img src={require('../img/florida.png')} className="florida__home--state--mobile d-block d-md-none mx-auto my-3" alt="Florida" />
                         <h1 className="florida__home--title d-inline px-3 py-2 my-5">the florida man files</h1>
-                        <p className="florida__home--instructions my-3">Click on a mugshot to view the case.</p>
+                        <p className="florida__home--instructions mt-3 mb-0 my-md-3">Click on a mugshot<span className="red">*</span> to view the case.</p>
                     </Col>
                 </Row>
                 <Row className="justify-content-center">
