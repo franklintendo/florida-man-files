@@ -11,6 +11,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/case/:id" component={Case} />
+        <Route exact path='*' component={Home} />
       </Switch>
     </Router>
   );
