@@ -6,10 +6,7 @@ function Home() {
     let history = useHistory();
 
     function pushToCase(file) {
-        console.log(file);
-        // return <Redirect push to={`/case/${file.link}`}></Redirect>
         return history.push(`/case/${file.link}`);
-        
     }
 
     // Cases.json is fed into this function to create images based on each entry within the JSX
