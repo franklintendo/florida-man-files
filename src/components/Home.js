@@ -8,6 +8,7 @@ function Home() {
         
     }
 
+    // Cases.json is fed into this function to create images based on each entry within the JSX
     function renderCases(cases) {
         return cases.map(entry => {
             return <img key={entry.id} onClick={() => pushToCase(entry)} name={entry.link} src={require(`../img/mugshot/${entry.link}.png`)} alt={entry.name} className={`florida__mugshot--img florida__mugshot--${entry.link} rounded-circle`} /> 
