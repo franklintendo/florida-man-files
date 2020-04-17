@@ -1,10 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 function Home() {
+    let history = useHistory();
 
     function pushToCase(file) {
         console.log(file);
+        // return <Redirect push to={`/case/${file.link}`}></Redirect>
+        return history.push(`/case/${file.link}`);
         
     }
 
