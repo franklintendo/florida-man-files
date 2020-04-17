@@ -2,6 +2,19 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Home() {
+
+    function pushToCase(file) {
+        console.log(file);
+        
+    }
+
+    function renderCases(cases) {
+        return cases.map(entry => {
+            return <img key={entry.id} onClick={() => pushToCase(entry)} name={entry.link} src={require(`../img/mugshot/${entry.link}.png`)} alt={entry.name} className={`florida__mugshot--img florida__mugshot--${entry.link} rounded-circle`} /> 
+        });
+    }
+
+
     return(
 
         <div className="florida__home--container">
@@ -15,21 +28,9 @@ function Home() {
                 </Row>
                 <Row className="justify-content-center">
                     <Col className="col-12 col-md-8 text-center">
-                        <img src={require('../img/mugshot/berton-strong.png')} alt="Berton Strong" className="florida__mugshot--img florida__mugshot--berton-strong rounded-circle" />
 
-                        <img src={require('../img/mugshot/ben-jenkins.png')} alt="Ben Jenkins" className="florida__mugshot--img florida__mugshot--ben-jenkins rounded-circle" />
-
-                        <img src={require('../img/mugshot/albert-alvarez.png')} alt="Albert Alvarez" className="florida__mugshot--img florida__mugshot--albert-alvarez rounded-circle" />
-
-                        <img src={require('../img/mugshot/joel-jennings.png')} alt="Joel Jennings" className="florida__mugshot--img florida__mugshot--joel-jennings rounded-circle" />
-
-                        <img src={require('../img/mugshot/carl-skippins.png')} alt="Carl Skippins" className="florida__mugshot--img florida__mugshot--carl-skippins rounded-circle" />
-
-                        <img src={require('../img/mugshot/herman-douglas.png')} alt="Herman Douglas" className="florida__mugshot--img florida__mugshot--herman-douglas rounded-circle" />
-
-                        <img src={require('../img/mugshot/dewey-fleming.png')} alt="Dewey Fleming" className="florida__mugshot--img florida__mugshot--dewey-fleming rounded-circle" />
-
-                        <img src={require('../img/mugshot/donald-schmidt.png')} alt="Donald Schmidt" className="florida__mugshot--img florida__mugshot--donald-schmidt rounded-circle" />
+                        
+                        { renderCases(require('../cases.json')) }
 
                         <img src={require('../img/florida.png')} className="florida__home--state w-100" alt="Florida" />
                     </Col>
