@@ -2,41 +2,55 @@
     {
         "id": 1,
         "name": "Berton Strong",
-        "link": "berton-strong"
+        "link": "berton-strong",
+        "crime": "Kidnapping a mall Santa and submitting a grocery list as ransom."
     },
     {
         "id": 2,
         "name": "Ben Jenkins",
-        "link": "ben-jenkins"
+        "link": "ben-jenkins",
+        "crime": "Impersonating a dentist to secure free toothpaste."
     },
     {
         "id": 3,
         "name": "Albert Alvarez",
-        "link": "albert-alvarez"
+        "link": "albert-alvarez",
+        "crime": "Streaking in a nudist colony."
     },
     {
         "id": 4,
         "name": "Joel Jennings",
-        "link": "joel-jennings"
+        "link": "joel-jennings",
+        "crime": "Whipping packets of Go-gurt at oncoming traffic."
     },
     {
         "id": 5,
         "name": "Carl Skippins",
-        "link": "carl-skippins"
+        "link": "carl-skippins",
+        "crime": "Vandalizing a building scheduled to be demolished."
     },
     {
         "id": 6,
         "name": "Herman Douglas",
-        "link": "herman-douglas"
+        "link": "herman-douglas",
+        "crime": "Training ants to steal."
     },
     {
         "id": 7,
         "name": "Dewey Fleming",
-        "link": "dewey-fleming"
+        "link": "dewey-fleming",
+        "crime": "Freeing the animals from a zoo."
     },
     {
         "id": 8,
         "name": "Donald Schmidt",
-        "link": "donald-schmidt"
+        "link": "donald-schmidt",
+        "crime": "Hacking into Toys'R Us.com and posting profane material."
+    },
+    {
+        "id": 9,
+        "name": "Clam Jones",
+        "link": "clam-jones",
+        "crime": "Brainwashing a group of laser-tag players to help overthrow a local Denny's."
     }
 ]
