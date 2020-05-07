@@ -51,6 +51,10 @@ p, span
       &--mobile
         width: 25%;
     &--attr
+      @include media-breakpoint-only(xl)
+        position: absolute;
+        bottom: 0;
+        right: 0;
       a
         color: $black;
         text-decoration: underline;
