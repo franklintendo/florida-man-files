@@ -51,9 +51,6 @@ p, span
       &--mobile
         width: 25%;
     &--attr
-      position: absolute;
-      bottom: 0;
-      right: 0;
       a
         color: $black;
         text-decoration: underline;
@@ -120,7 +117,22 @@ p, span
       left: 77%;
   &__case-file
     &--photo
-      
+      width: fit-content;
+      position: relative;
+      &-container
+        position: relative;
+        z-index: 5;
+        width: 260px;
+      &-mugshot
+        position: absolute;
+        top: 7%;
+        left: 13%;
+        width: 74%;
+        z-index: 1;
+        transform: rotate(-4.5deg);
+        // border-left: 13px solid #daf8f9;
+        // border-right: 13px solid #daf8f9;
+
 
   
 @media (prefers-reduced-motion: no-preference) 

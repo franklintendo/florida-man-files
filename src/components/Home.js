@@ -39,7 +39,7 @@ function Home() {
                     
                 </Row>
             </Container>
-            <div className="florida__home--attr text-right mr-3 mb-3">
+            <div className="florida__home--attr text-right pr-2 pb-2">
                 <span className="red red--bold">*</span>Photos by <a href="https://generated.photos" target="_blank" rel="noopener noreferrer">Generated Photos</a>
             </div>
         </div>

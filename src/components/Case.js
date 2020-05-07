@@ -18,7 +18,13 @@ function Case(props) {
             <Container fluid>
                 <Row>
                     <Col>
-                    {caseFile ? <img name={caseFile.link} src={require(`../img/mugshot/${caseFile.link}.png`)} alt={caseFile.name} className={`florida__case-file--photo`} /> : <Redirect to="/"></Redirect>}
+                        <div className="florida__case-file--photo">
+                            <img className="florida__case-file--photo-container" src={require('../img/photo-container.png')} alt="Polaroid" />
+
+                            {caseFile ? <img name={caseFile.link} src={require(`../img/mugshot/${caseFile.link}.png`)} alt={caseFile.name} className={`florida__case-file--photo-mugshot`} /> : <Redirect to="/"></Redirect>}
+
+                        </div>
+                    
                     </Col>
                 </Row>
             </Container>
