@@ -14,13 +14,15 @@ function Case(props) {
     });
 
     return(
-        <Container fluid>
-            <Row>
-                <Col>
-                {caseFile ? <img name={caseFile.link} src={require(`../img/mugshot/${caseFile.link}.png`)} alt={caseFile.name} className={`florida__mugshot--img rounded-circle`} /> : <Redirect to="/"></Redirect>}
-                </Col>
-            </Row>
-        </Container>
+        <div className="florida__home--container">
+            <Container fluid>
+                <Row>
+                    <Col>
+                    {caseFile ? <img name={caseFile.link} src={require(`../img/mugshot/${caseFile.link}.png`)} alt={caseFile.name} className={`florida__case-file--photo`} /> : <Redirect to="/"></Redirect>}
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     )
 }
 
