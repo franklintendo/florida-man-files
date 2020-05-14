@@ -20,7 +20,7 @@ function Home() {
     return(
 
         <div className="florida__home--container">
-            <Container className="florida__home--content">
+            <Container className="florida__home--content pb-4">
                 <Row>
                     <Col className="text-center py-md-5 mb-3">
                     <img src={require('../img/florida.png')} className="florida__home--state--mobile d-block d-md-none mx-auto my-3" alt="Florida" />

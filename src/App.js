@@ -3,11 +3,13 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Case from "./components/Case";
+import Hamburger from "./components/Hamburger";
 import "./App.sass";
 
 function App() {
   return (
     <Router>
+      <Hamburger />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/case/:id" component={Case} />
