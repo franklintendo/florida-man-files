@@ -17,6 +17,9 @@ html, body, #root
   margin: 0;
   font-family: $ubuntu;
 
+.remove-scroll
+  overflow: hidden;
+
 h1, h2, h3, h4, h5, h6
   font-family: $rokkit;
 
@@ -142,6 +145,18 @@ p, span
   position: absolute;
   right: 0;
   top: 0;
+  transition: all 0.5s ease
+  background-color: transparent;
+  &.expanded
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    z-index: 99;
+    .fa-bars
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #FFFFFF;
   .fa-bars
     font-size: 21px;
     &:hover
