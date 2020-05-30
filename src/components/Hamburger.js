@@ -9,15 +9,6 @@ function Hamburger() {
       menu.add("active");
       body.classList.add("remove-scroll");
 
-
-
-      // if (menu.contains("expanded")) {
-      //   hamburger.remove("expanded");
-      //   body.classList.remove("remove-scroll");
-      // } else {
-      //   hamburger.add("expanded");
-      //   body.classList.add("remove-scroll");
-      // }
     }
 
     return (
