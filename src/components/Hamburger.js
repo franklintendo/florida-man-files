@@ -3,16 +3,21 @@ import React from 'react';
 function Hamburger() {
 
     const showSidebar = () => {
-      let hamburger = document.querySelector(".hamburger-menu").classList;
+      let menu = document.querySelector(".hamburger-menu__expanded").classList;
       let body = document.body;
 
-      if (hamburger.contains("expanded")) {
-        hamburger.remove("expanded");
-        body.classList.remove("remove-scroll");
-      } else {
-        hamburger.add("expanded");
-        body.classList.add("remove-scroll");
-      }
+      menu.add("active");
+      body.classList.add("remove-scroll");
+
+
+
+      // if (menu.contains("expanded")) {
+      //   hamburger.remove("expanded");
+      //   body.classList.remove("remove-scroll");
+      // } else {
+      //   hamburger.add("expanded");
+      //   body.classList.add("remove-scroll");
+      // }
     }
 
     return (

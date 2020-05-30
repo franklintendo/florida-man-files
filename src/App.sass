@@ -137,31 +137,51 @@ p, span
         width: 74%;
         z-index: 1;
         transform: rotate(-4.5deg);
-        // border-left: 13px solid #daf8f9;
-        // border-right: 13px solid #daf8f9;
 
-.hamburger-menu
-  width: fit-content;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all 0.5s ease
-  background-color: transparent;
-  &.expanded
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    z-index: 99;
+.hamburger
+  &-menu
+    width: fit-content;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.0)
+    transition: all 0.5s ease;
     .fa-bars
+      font-size: 21px;
+      &:hover
+        color: $red;
+        cursor: pointer;
+    &__expanded
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.0);
       position: absolute;
-      right: 0;
-      top: 0;
-      color: #FFFFFF;
-  .fa-bars
-    font-size: 21px;
-    &:hover
-      color: $red;
-      cursor: pointer;
+      transition: all 0.5s ease;
+      &.active
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.7);
+        .sidebar
+          background-color: $red;
+          color: #FFFFFF;
+          width: 200px;
+      .sidebar
+        width: 0;
+        overflow: hidden;
+        height: 100%;
+        transition: all 0.5s ease;
+        position: absolute;
+        right: 0;
+        .fa-bars
+          font-size: 21px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          color: #FFFFFF;
+          &:hover
+            color: $blue;
+            cursor: pointer;
 
 
   
