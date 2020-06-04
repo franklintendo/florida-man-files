@@ -1,30 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import cases from "../cases.json";
+import Mugshot from "./Mugshot";
 import { Redirect } from "react-router-dom";
+import cases from "../cases.json";
 
 function Case(props) {
 
-    // Setting case file hook based on react router parameter (../case/:id)
+    // Setting caseFile state based on react router parameter (../case/:id)
     // Matches parameter to the "link" key-value pair in cases.json
-    const [caseFile, setCaseFile] = useState(() => {
+    const retrieveCase = useCallback(() => {
         const selectedFile = cases.filter(file => file.link === props.match.params.id);
-
         return selectedFile[0];
-    });
+    }, [props.match.params.id]);
+
+    const [caseFile, setCaseFile] = useState(retrieveCase());
+
+    // If the react router parameter (../case/:id) changes then update the case file state to match it
+    // by rerunning the retrieveCase function
+    useEffect(() => {
+        if (props.match.params.id !== caseFile.link) {
+            setCaseFile(retrieveCase());
+        }
+      }, [props.match.params.id, caseFile.link, retrieveCase]);
 
     return(
         <div className="florida__home--container">
             <Container fluid>
                 <Row>
                     <Col>
-                        <div className="florida__case-file--photo">
-                            <img className="florida__case-file--photo-container" src={require('../img/photo-container.png')} alt="Polaroid" />
 
-                            {caseFile ? <img name={caseFile.link} src={require(`../img/mugshot/${caseFile.link}.png`)} alt={caseFile.name} className={`florida__case-file--photo-mugshot`} /> : <Redirect to="/"></Redirect>}
-
-                        </div>
-                    
+                            {caseFile ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
+             
                     </Col>
                 </Row>
             </Container>

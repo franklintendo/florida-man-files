@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Case from "./components/Case";
