@@ -167,12 +167,14 @@ p, span
           background-color: $red;
           color: #FFFFFF;
           width: 400px;
+          overflow-y: auto;
+          @include media-breakpoint-only(xs)
+            width: 100%;
           a 
             opacity: 1;
-            
+            display: block;
       .sidebar
         width: 0;
-        overflow: hidden;
         height: 100%;
         transition: all 0.5s ease;
         position: absolute;
@@ -193,6 +195,7 @@ p, span
           transition: opacity 0.3s ease;
           padding: 5px 10px;
           font-size: 18px;
+          display: none;
           &:hover
               background-color: $blue;
               text-decoration: none;
