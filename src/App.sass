@@ -167,6 +167,9 @@ p, span
           background-color: $red;
           color: #FFFFFF;
           width: 400px;
+          a 
+            opacity: 1;
+            
       .sidebar
         width: 0;
         overflow: hidden;
@@ -174,6 +177,7 @@ p, span
         transition: all 0.5s ease;
         position: absolute;
         right: 0;
+        padding-top: 50px;
         .fa-bars
           font-size: 21px;
           position: absolute;
@@ -183,6 +187,16 @@ p, span
           &:hover
             color: $blue;
             cursor: pointer;
+        a
+          opacity: 0;
+          color: #FFFFFF;
+          transition: opacity 0.3s ease;
+          padding: 5px 10px;
+          font-size: 18px;
+          &:hover
+              background-color: $blue;
+              text-decoration: none;
+        
 
 
   
