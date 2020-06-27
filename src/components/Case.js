@@ -24,13 +24,21 @@ function Case(props) {
       }, [props.match.params.id, caseFile.link, retrieveCase]);
 
     return(
-        <div className="florida__home--container">
+        <div className="florida__home--container d-flex">
             <Container fluid>
-                <Row>
-                    <Col>
+                <Row className="h-100">
+                    <Col md={8} className="florida__case-file--document">
+                        
 
+                        
                             {caseFile ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
-             
+
+                            <div className="florida__case-file--document-logo">
+                                <img src={require('../img/fatt-logo.png')} alt="Florida Anti-Tomfoolery Taskforce" />
+                            </div>
+                        
+
+                       
                     </Col>
                 </Row>
             </Container>
