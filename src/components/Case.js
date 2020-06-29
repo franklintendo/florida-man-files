@@ -26,16 +26,47 @@ function Case(props) {
     return(
         <div className="florida__home--container d-flex">
             <Container fluid>
-                <Row className="h-100">
+                <Row className="h-100 justify-content-center">
                     <Col md={8} className="florida__case-file--document">
                         
 
                         
                             {caseFile ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
-                            <div className="florida__case-file--document-logo">
+                            <div className="florida__case-file--document-logo mx-5">
                                 <img src={require('../img/fatt-logo.png')} alt="Florida Anti-Tomfoolery Taskforce" />
                             </div>
+
+                            <Container fluid className="florida__case-file--document-text-top">
+                                <Row className="mx-4 py-3 px-4">
+                                    <Col xs={"3"} className="text-right">
+                                        Reported By:
+                                    </Col>
+                                    <Col className="filled-out">
+                                        Skipper McGee
+                                    </Col>
+                                    <Col xs={"3"} className="text-right">
+                                        Date of Incident:
+                                    </Col>
+                                    <Col className="filled-out">
+                                        6/29/2020
+                                    </Col>
+                                </Row>
+                                <Row className="mx-4 pb-3 px-4">
+                                    <Col xs={"3"} className="text-right">
+                                        Incident Number:
+                                    </Col>
+                                    <Col className="filled-out">
+                                        14355{caseFile.id}
+                                    </Col>
+                                    <Col xs={"3"} className="text-right">
+                                        Name of Perpetrator:
+                                    </Col>
+                                    <Col className="filled-out">
+                                        {caseFile.name}
+                                    </Col>
+                                </Row>
+                            </Container>
                         
 
                        

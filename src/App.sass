@@ -8,8 +8,8 @@ $black: #333333;
 $purple: #CC76A1;
 
 /* fonts */
-$rokkit: 'Rokkitt', serif;;
-$ubuntu: 'Ubuntu Mono', monospace;;
+$rokkit: 'Rokkitt', serif;
+$ubuntu: 'Ubuntu Mono', monospace;
 
 
 html, body, #root
@@ -131,13 +131,27 @@ p, span
       margin: 20px 15px 0 15px;
       &-logo
         text-align: center;
-        padding-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 20px;
         img
-          width: 50%;
+          width: 55%;
+      &-text
+        &-top
+          .row
+            border-left: 1px solid #555555;
+            border-right: 1px solid #555555;
+            &:nth-child(1)
+              border-top: 1px solid #555555;
+            &:last-child
+              border-bottom: 1px solid #555555;
+          .filled-out
+            border-bottom: 1px solid #888888;
+            font-weight: bold;
     &--photo
       width: fit-content;
       position: absolute
       margin-top: -17px;
+      margin-left: -40px;
       &-container
         position: relative;
         z-index: 5;
