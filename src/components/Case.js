@@ -29,44 +29,56 @@ function Case(props) {
                 <Row className="h-100 justify-content-center">
                     <Col md={8} className="florida__case-file--document">
                         
+                        {caseFile ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
+                        <div className="florida__case-file--document-logo mx-5">
+                            <img src={require('../img/fatt-logo.png')} alt="Florida Anti-Tomfoolery Taskforce" />
+                        </div>
+
+                        <Container fluid className="florida__case-file--document-text-top">
+                            <Row className="mx-4 py-3 px-4">
+                                <Col xs={"3"} className="text-right">
+                                    Reported By:
+                                </Col>
+                                <Col className="filled-out">
+                                    Skipper McGee
+                                </Col>
+                                <Col xs={"3"} className="text-right">
+                                    Date of Incident:
+                                </Col>
+                                <Col className="filled-out">
+                                    6/29/2020
+                                </Col>
+                            </Row>
+                            <Row className="mx-4 pb-3 px-4">
+                                <Col xs={"3"} className="text-right">
+                                    Incident Number:
+                                </Col>
+                                <Col className="filled-out">
+                                    14355{caseFile.id}
+                                </Col>
+                                <Col xs={"3"} className="text-right">
+                                    Name of Perpetrator:
+                                </Col>
+                                <Col className="filled-out">
+                                    {caseFile.name}
+                                </Col>
+                            </Row>
+                        </Container>
+
+                        <Container fluid className="mt-3">
+                            <Row className="mx-3 py-3">
+                                <Col>
+                                    Incident Description: 
+                                </Col>
+                            </Row>
+                            <Row className="mx-4 py-3 px-4 florida__case-file--document-text-incident">
+                                <Col>
+                                    {caseFile.crime}
+                                </Col>
+                            </Row>
+                        </Container>
                         
-                            {caseFile ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
-
-                            <div className="florida__case-file--document-logo mx-5">
-                                <img src={require('../img/fatt-logo.png')} alt="Florida Anti-Tomfoolery Taskforce" />
-                            </div>
-
-                            <Container fluid className="florida__case-file--document-text-top">
-                                <Row className="mx-4 py-3 px-4">
-                                    <Col xs={"3"} className="text-right">
-                                        Reported By:
-                                    </Col>
-                                    <Col className="filled-out">
-                                        Skipper McGee
-                                    </Col>
-                                    <Col xs={"3"} className="text-right">
-                                        Date of Incident:
-                                    </Col>
-                                    <Col className="filled-out">
-                                        6/29/2020
-                                    </Col>
-                                </Row>
-                                <Row className="mx-4 pb-3 px-4">
-                                    <Col xs={"3"} className="text-right">
-                                        Incident Number:
-                                    </Col>
-                                    <Col className="filled-out">
-                                        14355{caseFile.id}
-                                    </Col>
-                                    <Col xs={"3"} className="text-right">
-                                        Name of Perpetrator:
-                                    </Col>
-                                    <Col className="filled-out">
-                                        {caseFile.name}
-                                    </Col>
-                                </Row>
-                            </Container>
                         
 
                        
