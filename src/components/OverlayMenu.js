@@ -6,7 +6,7 @@ function OverlayMenu() {
     // Cases.json is fed into this function to create links based on each entry within the JSX
     function renderLinks(links) {
       return links.map(entry => {
-          return <Link push to={`/case/${entry.link}`} onClick={removeSidebar} key={entry.id}>{entry.name}</Link> 
+          return <Link push="true" to={`/case/${entry.link}`} onClick={removeSidebar} key={entry.id}>{entry.name}</Link> 
       });
     }
 
@@ -25,7 +25,7 @@ function OverlayMenu() {
       <div className="hamburger-menu__expanded">
           <div className="sidebar">
             <i className="px-3 py-3 fas fa-bars" onClick={removeSidebar}></i>
-            <Link push to={'/'} onClick={removeSidebar}>Home</Link>
+            <Link push="true" to={'/'} onClick={removeSidebar}>Home</Link>
             { renderLinks(require('../cases.json')) }
           </div>
           <div className="w-100 h-100" onClick={removeSidebar}>

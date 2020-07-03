@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Mugshot from "./Mugshot";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import cases from "../cases.json";
 
 function Case(props) {
@@ -84,7 +84,7 @@ function Case(props) {
                                     Incident Description: 
                                 </Col>
                             </Row>
-                            <Row className="mx-4 py-3 px-4 florida__case-file--document-text-incident">
+                            <Row className="mx-4 mb-3 py-3 px-4 florida__case-file--document-text-incident">
                                 <Col>
                                     {caseFile.crime}
                                 </Col>
