@@ -36,12 +36,12 @@ function Case(props) {
 
     return(
         <div className="florida__home--container d-flex">
+            <div className="florida__case-file--phone">
+                <img className="florida__case-file--phone-img" src={require('../img/phone.png')} alt="phone" />
+            </div>
             <Container fluid>
                 <Row className="h-100 justify-content-center">
                     <Col md={8} className="florida__case-file--document">
-                        
-                        <img className="florida__case-file--phone" src={require('../img/phone.png')} alt="phone" />
-
                         {caseFile.link !== "false" ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
                         <div className="florida__case-file--document-logo mx-5">
