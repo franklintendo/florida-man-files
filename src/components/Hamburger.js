@@ -12,8 +12,8 @@ function Hamburger() {
     }
 
     return (
-      <div class="hamburger-menu">
-          <i class="px-3 py-3 fas fa-bars" onClick={showSidebar}></i>
+      <div className="hamburger-menu">
+          <i className="px-3 py-3 fas fa-bars" onClick={showSidebar}></i>
       </div>
     );
   }
