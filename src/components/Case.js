@@ -37,6 +37,7 @@ function Case(props) {
     return(
         <div className="florida__home--container d-flex">
             <div className="florida__case-file--phone">
+                <img className="florida__case-file--phone-play" src={require('../img/play-btn.png')} alt="play button" />
                 <img className="florida__case-file--phone-img" src={require('../img/phone.png')} alt="phone" />
             </div>
             <Container fluid>
