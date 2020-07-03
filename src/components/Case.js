@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Mugshot from "./Mugshot";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import cases from "../cases.json";
 
 function Case(props) {
@@ -10,7 +10,18 @@ function Case(props) {
     // Matches parameter to the "link" key-value pair in cases.json
     const retrieveCase = useCallback(() => {
         const selectedFile = cases.filter(file => file.link === props.match.params.id);
-        return selectedFile[0];
+        if (selectedFile.length) {
+            return selectedFile[0];
+        } else {
+            // If there is no cases that match the react router parameter,
+            // create an object that will redirect to the home page when read 
+            // in a condition in the JSX
+            const falseObj = {
+                "link": "false",
+            }
+            return falseObj;
+        }
+        
     }, [props.match.params.id]);
 
     const [caseFile, setCaseFile] = useState(retrieveCase());
@@ -29,10 +40,11 @@ function Case(props) {
                 <Row className="h-100 justify-content-center">
                     <Col md={8} className="florida__case-file--document">
                         
-                        {caseFile ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
+                        {caseFile.link !== "false" ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
                         <div className="florida__case-file--document-logo mx-5">
                             <img src={require('../img/fatt-logo.png')} alt="Florida Anti-Tomfoolery Taskforce" />
+                            <h2 className="mt-2">INCIDENT REPORT</h2>
                         </div>
 
                         <Container fluid className="florida__case-file--document-text-top">

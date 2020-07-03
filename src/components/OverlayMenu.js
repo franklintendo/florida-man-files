@@ -22,13 +22,13 @@ function OverlayMenu() {
     }
 
     return (
-      <div class="hamburger-menu__expanded">
-          <div class="sidebar">
-            <i class="px-3 py-3 fas fa-bars" onClick={removeSidebar}></i>
+      <div className="hamburger-menu__expanded">
+          <div className="sidebar">
+            <i className="px-3 py-3 fas fa-bars" onClick={removeSidebar}></i>
             <Link push to={'/'} onClick={removeSidebar}>Home</Link>
             { renderLinks(require('../cases.json')) }
           </div>
-          <div class="w-100 h-100" onClick={removeSidebar}>
+          <div className="w-100 h-100" onClick={removeSidebar}>
             
           </div>
       </div>
