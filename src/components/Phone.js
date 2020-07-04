@@ -7,7 +7,9 @@ function Phone() {
         let phonePlayBtn = document.querySelector(".florida__case-file--phone-play").classList;
 
         phoneDiv.add("playing");
+        phoneDiv.add("in-progress");
         phonePlayBtn.add("d-none");
+        setTimeout(function(){ phoneDiv.remove("in-progress"); }, 400);
     }
 
     return(
