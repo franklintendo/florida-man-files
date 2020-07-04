@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Mugshot from "./Mugshot";
+import Phone from "./Phone";
 import { Redirect } from "react-router-dom";
 import cases from "../cases.json";
 
@@ -13,6 +14,7 @@ function Case(props) {
         if (selectedFile.length) {
             return selectedFile[0];
         } else {
+
             // If there is no cases that match the react router parameter,
             // create an object that will redirect to the home page when read 
             // in a condition in the JSX
@@ -36,13 +38,11 @@ function Case(props) {
 
     return(
         <div className="florida__home--container d-flex">
-            <div className="florida__case-file--phone">
-                <img className="florida__case-file--phone-play" src={require('../img/play-btn.png')} alt="play button" />
-                <img className="florida__case-file--phone-img" src={require('../img/phone.png')} alt="phone" />
-            </div>
+            <Phone></Phone>
             <Container fluid>
                 <Row className="h-100 justify-content-center">
                     <Col md={8} className="florida__case-file--document">
+
                         {caseFile.link !== "false" ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
                         <div className="florida__case-file--document-logo mx-5">
