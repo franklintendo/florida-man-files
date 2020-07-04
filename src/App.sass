@@ -11,6 +11,12 @@ $purple: #CC76A1;
 $rokkit: 'Rokkitt', serif;
 $ubuntu: 'Ubuntu Mono', monospace;
 
+/* phone video transitions */
+$backgroundPlaying: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
+$backgroundClosing: width 0.2s ease 0.3s, height 0.2s ease 0.3s, background-color 0.1s ease-out, backdrop-filter 0.1s ease-out;
+$phonePlaying: all 0.4s ease 0.1s;
+$phoneClosing: all 0.3s ease 0.3s;
+
 
 html, body, #root
   height: 100%;
@@ -180,44 +186,55 @@ p, span
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 500px;
+      width: 360px;
       height: 500px;
       overflow: hidden;
       z-index: 50;
-      -webkit-transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
-      -moz-transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
-      -o-transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
-      transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
+      text-align: center;
+      display: flex; 
+      align-items: center;
+      justify-content: center;
       &.playing
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(3px);
-        text-align: center;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
+        -webkit-transition: $backgroundPlaying;
+        -moz-transition: $backgroundPlaying;
+        -o-transition: $backgroundPlaying;
+        transition: $backgroundPlaying;
         .florida__case-file--phone-img
           transform: rotate(0deg);
           width: 750px;
           margin-top: auto;
           margin-left: auto;
           position: absolute;
+          -webkit-transition: $phonePlaying;
+          -moz-transition: $phonePlaying;
+          -o-transition: $phonePlaying;
+          transition: $phonePlaying;
+      &.closing
+        // background-color: rgba(250, 0, 0, 0.7);
+        -webkit-transition: $backgroundClosing;
+        -moz-transition: $backgroundClosing;
+        -o-transition: $backgroundClosing;
+        transition: $backgroundClosing;
+        .florida__case-file--phone-img
+          -webkit-transition: $phoneClosing;
+          -moz-transition: $phoneClosing;
+          -o-transition: $phoneClosing;
+          transition: $phoneClosing;
       &-img 
         width: 600px;
         transform: rotate(90deg);
         margin-top: 250px;
         margin-left: 40px;
-        -webkit-transition: all 0.4s ease 0.1s;
-        -moz-transition: all 0.4s ease 0.1s;
-        -o-transition: all 0.4s ease 0.1s;
-        transition: all 0.4s ease 0.1s;
-      &-play
+      &-play-btn
         width: 175px;
         position: absolute;
         z-index: 10;
-        left: 253px;
-        top: 280px;
+        left: 32%;
+        top: 57%;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -227,7 +244,7 @@ p, span
           -webkit-transform: scale(1.15);
           -ms-transform: scale(1.15);
           transform: scale(1.15);
-      &-close
+      &-close-btn
         position: absolute;
         top: 0;
         right: 0;
