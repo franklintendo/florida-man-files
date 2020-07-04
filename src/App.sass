@@ -184,7 +184,6 @@ p, span
       height: 500px;
       overflow: hidden;
       z-index: 50;
-      // background-color: rgba(40, 40, 40, 0.7);
       -webkit-transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
       -moz-transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
       -o-transition: width 0.3s ease-out, height 0.3s ease-out, background-color 0.2s ease 0.3s, backdrop-filter 0.2s ease 0.3s;
@@ -228,6 +227,17 @@ p, span
           -webkit-transform: scale(1.15);
           -ms-transform: scale(1.15);
           transform: scale(1.15);
+      &-close
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #FFFFFF;
+        font-size: 54px;
+        padding: 0 30px;
+        font-family: $ubuntu;
+        &:hover
+          color: $red;
+          cursor: pointer;
           
 
 .hamburger
