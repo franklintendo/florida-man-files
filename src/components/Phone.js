@@ -9,7 +9,6 @@ function Phone() {
         phoneDiv.add("playing");
         phoneDiv.add("in-progress");
         phonePlayBtn.add("d-none");
-        setTimeout(function(){ phoneDiv.remove("in-progress"); }, 400);
     }
 
     return(
