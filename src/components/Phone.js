@@ -10,11 +10,11 @@ function Phone({video: {video}}) {
         let video = document.querySelector("#incident-video");
 
         phoneDiv.add("playing");
-        video.classList.remove("d-none");
         phoneDiv.remove("closing");
         phonePlayBtn.add("d-none");
         phoneCloseBtn.remove("d-none");
         overlayBackground.remove("d-none");
+        setTimeout(() => { video.classList.remove("d-none"); video.play(); }, 500);
 
     }
 
@@ -39,7 +39,7 @@ function Phone({video: {video}}) {
         <div className="florida__case-file--phone">
             <p onClick={closeVideo} className="florida__case-file--phone-close-btn d-none">x</p>
             <img onClick={playVideo} className="florida__case-file--phone-play-btn" src={require('../img/play-btn.png')} alt="play button" />
-            <video id="incident-video" className="d-none" width="420" controls="controls">
+            <video id="incident-video" className="florida__case-file--phone-video d-none" controls="controls">
                 <source src={require(`../video/${video}.avi`)} type="video/avi"></source>
                 <source src={require(`../video/${video}.webm`)} type="video/webm"></source>
                 <source src={require(`../video/${video}.ogv`)} type="video/ogg"></source>
