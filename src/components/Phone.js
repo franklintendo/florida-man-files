@@ -1,7 +1,7 @@
 import React from "react";
 
-function Phone({video}) {
-    console.log(video.video);
+function Phone({video: {video}}) {
+
     const playVideo = () => {
         let phoneDiv = document.querySelector(".florida__case-file--phone").classList;
         let phonePlayBtn = document.querySelector(".florida__case-file--phone-play-btn").classList;
