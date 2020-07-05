@@ -3,54 +3,63 @@
         "id": 1,
         "name": "Berton Strong",
         "link": "berton-strong",
-        "crime": "Kidnapping a mall Santa and submitting a grocery list as ransom."
+        "crime": "Kidnapping a mall Santa and submitting a grocery list as ransom.",
+        "video": "ransom"
     },
     {
         "id": 2,
         "name": "Ben Jenkins",
         "link": "ben-jenkins",
-        "crime": "Impersonating a dentist to secure free toothpaste."
+        "crime": "Impersonating a dentist to secure free toothpaste.",
+        "video": "dentist"
     },
     {
         "id": 3,
         "name": "Albert Alvarez",
         "link": "albert-alvarez",
-        "crime": "Streaking in a nudist colony."
+        "crime": "Streaking in a nudist colony.",
+        "video": "streaking"
     },
     {
         "id": 4,
         "name": "Joel Jennings",
         "link": "joel-jennings",
-        "crime": "Whipping packets of Go-gurt at oncoming traffic."
+        "crime": "Whipping packets of Go-gurt at oncoming traffic.",
+        "video": "gogurt"
     },
     {
         "id": 5,
         "name": "Carl Skippins",
         "link": "carl-skippins",
-        "crime": "Vandalizing a building scheduled to be demolished."
+        "crime": "Vandalizing a building scheduled to be demolished.",
+        "video": "vandalize"
     },
     {
         "id": 6,
         "name": "Herman Douglas",
         "link": "herman-douglas",
-        "crime": "Training ants to steal."
+        "crime": "Training ants to steal.",
+        "video": "ants"
     },
     {
         "id": 7,
         "name": "Dewey Fleming",
         "link": "dewey-fleming",
-        "crime": "Freeing the animals from a zoo."
+        "crime": "Freeing the animals from a zoo.",
+        "video": "zoo"
     },
     {
         "id": 8,
         "name": "Donald Schmidt",
         "link": "donald-schmidt",
-        "crime": "Hacking into Toys'R Us.com and posting profane material."
+        "crime": "Hacking into Toys'R Us.com and posting profane material.",
+        "video": "hack"
     },
     {
         "id": 9,
         "name": "Clam Jones",
         "link": "clam-jones",
-        "crime": "Brainwashing a group of laser-tag players to help overthrow a local Denny's."
+        "crime": "Brainwashing a group of laser-tag players to help overthrow a local Denny's.",
+        "video": "dennys"
     }
 ]

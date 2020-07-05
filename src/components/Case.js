@@ -38,7 +38,7 @@ function Case(props) {
 
     return(
         <div className="florida__home--container d-flex">
-            <Phone></Phone>
+            <Phone video={caseFile}></Phone>
             <Container fluid>
                 <Row className="h-100 justify-content-center">
                     <Col md={8} className="florida__case-file--document">
