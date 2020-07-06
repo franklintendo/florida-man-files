@@ -56,7 +56,7 @@ function Case(props) {
                                     Reported By:
                                 </Col>
                                 <Col className="filled-out">
-                                    Skipper McGee
+                                    Liam Ipsum
                                 </Col>
                                 <Col xs={"3"} className="text-right">
                                     Date of Incident:
