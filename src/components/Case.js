@@ -45,7 +45,7 @@ function Case(props) {
 
                         {caseFile.link !== "false" ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
-                        <div className="florida__case-file--document-logo mx-5">
+                        <div className="florida__case-file--document-logo mx-3 mx-md-5">
                             <img src={require('../img/fatt-logo.png')} alt="Florida Anti-Tomfoolery Taskforce" />
                             <h2 className="mt-2">INCIDENT REPORT</h2>
                         </div>

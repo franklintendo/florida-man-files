@@ -151,10 +151,12 @@ p, span
           width: 45%;
           @include media-breakpoint-only(md)
             width: 55%;
-          @include media-breakpoint-down(sm)
+          @include media-breakpoint-only(sm)
             width: 65%;
+          @include media-breakpoint-only(xs)
+            width: 85%;
         h2
-          @include media-breakpoint-only(md)
+          @include media-breakpoint-down(md)
             font-size: 1.5rem;
       &-text
         &-top
@@ -182,14 +184,20 @@ p, span
         margin-left: -40px;
       @include media-breakpoint-down(md)
         margin-left: -30px;
+      @include media-breakpoint-down(sm)
+        transform: rotate(20.5deg);
+        z-index: 20;
+        margin-top: 130px;
       &-container
         position: relative;
         z-index: 5;
         width: 260px;
         @include media-breakpoint-only(lg)
           width: 220px;
-        @include media-breakpoint-down(md)
+        @include media-breakpoint-only(md)
           width: 200px;
+        @include media-breakpoint-down(sm)
+          width: 240px;
       &-mugshot
         position: absolute;
         top: 7%;
