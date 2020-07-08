@@ -40,7 +40,7 @@ function Case(props) {
         <div className="florida__home--container d-flex">
             <Phone video={caseFile}></Phone>
             <Container fluid>
-                <Row className="h-100 justify-content-center">
+                <Row className="h-100 justify-content-center justify-content-md-start justify-content-lg-center">
                     <Col md={8} className="florida__case-file--document">
 
                         {caseFile.link !== "false" ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
