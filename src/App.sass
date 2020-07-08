@@ -143,6 +143,8 @@ p, span
       background-color: #FFFFFF;
       padding: 0;
       margin: 20px 15px 0 15px;
+      @include media-breakpoint-only(md)
+        margin: 20px 15px 0 15px;
       &-logo
         text-align: center;
         padding-top: 30px;
@@ -225,7 +227,7 @@ p, span
       display: flex; 
       align-items: center;
       justify-content: center;
-      @include media-breakpoint-only(lg)
+      @include media-breakpoint-down(lg)
         width: 300px;
         height: 400px;
       &.playing
@@ -266,7 +268,7 @@ p, span
         transform: rotate(90deg);
         margin-top: 250px;
         margin-left: 40px;
-        @include media-breakpoint-only(lg)
+        @include media-breakpoint-down(lg)
           width: 500px;
       &-play-btn
         width: 175px;
@@ -283,7 +285,7 @@ p, span
           -webkit-transform: scale(1.15);
           -ms-transform: scale(1.15);
           transform: scale(1.15);
-        @include media-breakpoint-only(lg)
+        @include media-breakpoint-down(lg)
           left: 27%;
           top: 54%;
       &-close-btn
