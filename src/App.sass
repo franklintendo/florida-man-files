@@ -146,7 +146,7 @@ p, span
       @include media-breakpoint-only(md)
         margin: 20px 15px 0 75px;
       @include media-breakpoint-down(sm)
-        padding: 0 0 325px 0;
+        padding: 0 0 355px 0;
       &-logo
         text-align: center;
         padding-top: 30px;
@@ -236,7 +236,7 @@ p, span
         height: 400px;
       @include media-breakpoint-down(sm)
         width: auto;
-        height: auto;
+        height: 370px;
         right: auto;
         margin-left: -10px;
       &.playing
@@ -285,7 +285,10 @@ p, span
         @include media-breakpoint-down(sm)
           transform: rotate(0deg);
           width: 100%;
-          margin-left: 0
+          margin-left: 0;
+          margin-top: 0;
+        @include media-breakpoint-only(xs)
+          transform: rotate(90deg);
       &-play-btn
         width: 175px;
         position: absolute;
@@ -305,8 +308,8 @@ p, span
           left: 27%;
           top: 54%;
         @include media-breakpoint-down(sm)
-          left: 34%;
-          top: 59%;
+          left: 37%;
+          top: 29%;
       &-close-btn
         position: absolute;
         top: 0;
