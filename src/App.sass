@@ -275,6 +275,8 @@ p, span
           transition: $phonePlaying;
         @include media-breakpoint-down(sm)
           position: fixed;
+        @include media-breakpoint-only(xs)
+          padding-top: 0;
       &.closing
         -webkit-transition: $backgroundClosing;
         -moz-transition: $backgroundClosing;
