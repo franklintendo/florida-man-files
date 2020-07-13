@@ -51,8 +51,8 @@ function Case(props) {
                         </div>
 
                         <Container fluid className="florida__case-file--document-text-top">
-                            <Row className="mx-4 py-3 px-4">
-                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3 mt-3 mt-sm-0">
+                            <Row className="mx-0 mx-sm-4 py-3 px-4">
+                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3">
                                     Reported By:
                                 </Col>
                                 <Col className="filled-out  px-0 px-sm-3">
@@ -65,7 +65,7 @@ function Case(props) {
                                     6/29/2020
                                 </Col>
                             </Row>
-                            <Row className="mx-4 pb-3 px-4">
+                            <Row className="mx-0 mx-sm-4 pb-3 px-4">
                                 <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3">
                                     Incident Number:
                                 </Col>
@@ -82,12 +82,12 @@ function Case(props) {
                         </Container>
 
                         <Container fluid className="mt-3">
-                            <Row className="mx-3 py-3">
+                            <Row className="mx-0 mx-sm-3 py-3">
                                 <Col>
                                     Incident Description: 
                                 </Col>
                             </Row>
-                            <Row className="mx-4 mb-3 py-3 px-4 florida__case-file--document-text-incident">
+                            <Row className="mx-0 mx-sm-4 mb-3 py-3 px-4 florida__case-file--document-text-incident">
                                 <Col>
                                     {caseFile.crime}
                                 </Col>
