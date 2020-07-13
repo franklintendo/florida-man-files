@@ -218,8 +218,10 @@ p, span
           width: 220px;
         @include media-breakpoint-only(md)
           width: 200px;
-        @include media-breakpoint-down(sm)
+        @include media-breakpoint-only(sm)
           width: 240px;
+        @include media-breakpoint-only(xs)
+          width: 200px;
       &-mugshot
         position: absolute;
         top: 7%;

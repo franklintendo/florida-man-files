@@ -66,7 +66,7 @@ function Case(props) {
                                 </Col>
                             </Row>
                             <Row className="mx-4 pb-3 px-4">
-                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3 mt-3 mt-sm-0">
+                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3">
                                     Incident Number:
                                 </Col>
                                 <Col className="filled-out px-0 px-sm-3">
