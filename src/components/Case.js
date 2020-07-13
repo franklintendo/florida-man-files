@@ -52,30 +52,30 @@ function Case(props) {
 
                         <Container fluid className="florida__case-file--document-text-top">
                             <Row className="mx-4 py-3 px-4">
-                                <Col xs={"3"} className="text-right">
+                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3 mt-3 mt-sm-0">
                                     Reported By:
                                 </Col>
-                                <Col className="filled-out">
+                                <Col className="filled-out  px-0 px-sm-3">
                                     Liam Ipsum
                                 </Col>
-                                <Col xs={"3"} className="text-right">
+                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3 mt-3 mt-sm-0">
                                     Date of Incident:
                                 </Col>
-                                <Col className="filled-out">
+                                <Col className="filled-out  px-0 px-sm-3">
                                     6/29/2020
                                 </Col>
                             </Row>
                             <Row className="mx-4 pb-3 px-4">
-                                <Col xs={"3"} className="text-right">
+                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3 mt-3 mt-sm-0">
                                     Incident Number:
                                 </Col>
-                                <Col className="filled-out">
+                                <Col className="filled-out px-0 px-sm-3">
                                     14355{caseFile.id}
                                 </Col>
-                                <Col xs={"3"} className="text-right">
+                                <Col xs={"12"} sm={"3"} className="text-sm-right px-0 px-sm-3 mt-3 mt-sm-0">
                                     Name of Perpetrator:
                                 </Col>
-                                <Col className="filled-out">
+                                <Col className="filled-out  px-0 px-sm-3">
                                     {caseFile.name}
                                 </Col>
                             </Row>
