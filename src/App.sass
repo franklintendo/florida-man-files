@@ -146,8 +146,10 @@ p, span
       left: 77%;
   &__case-file
     &--document
-      background-image: url('./img/paper.jpg');
-      background-repeat: repeat;
+      background-image: url('./img/paper-texture.jpg'), url('./img/paper.jpg');
+      background-repeat: no-repeat, repeat;
+      background-size: auto 100%, auto auto;
+      background-position: left top, left top;
       background-color: #FFFFFF;
       padding: 0;
       margin: 20px 15px 0 15px;
@@ -191,8 +193,17 @@ p, span
           font-weight: bold;
           font-size: 24px;
           height: 150px;
+          z-index: 2;
+          position: relative;
           @include media-breakpoint-down(sm)
             height: auto;
+      &-coffee
+        width: 259px;
+        height: auto;
+        position: absolute;
+        bottom: 200px;
+        right: 100px;
+        z-index: 1;
     &--photo
       width: fit-content;
       position: absolute

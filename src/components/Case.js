@@ -44,7 +44,7 @@ function Case(props) {
             <Container fluid>
                 <Row className="h-100 justify-content-center justify-content-md-start justify-content-lg-center">
                     <Col md={8} className="florida__case-file--document">
-
+                        <img src={require(`../img/coffee-stain.png`)} className="florida__case-file--document-coffee" alt="coffee stain" />
                         {caseFile.link !== "false" ? <Mugshot image={caseFile}></Mugshot> : <Redirect to="/"></Redirect>}
 
                         <div className="florida__case-file--document-logo mx-3 mx-md-5">
