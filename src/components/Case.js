@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Mugshot from "./Mugshot";
 import Phone from "./Phone";
+import HomeLink from "./HomeLink";
 import { Redirect } from "react-router-dom";
 import cases from "../cases.json";
 
@@ -38,6 +39,7 @@ function Case(props) {
 
     return(
         <div className="florida__home--container d-flex">
+            <HomeLink />
             <Phone video={caseFile}></Phone>
             <Container fluid>
                 <Row className="h-100 justify-content-center justify-content-md-start justify-content-lg-center">
