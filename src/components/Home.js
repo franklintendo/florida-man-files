@@ -31,7 +31,6 @@ function Home() {
                 <Row className="justify-content-center">
                     <Col className="col-12 col-md-8 text-center">
 
-                        
                         { renderCases(require('../cases.json')) }
 
                         <img src={require('../img/florida.png')} className="florida__home--state w-100" alt="Florida" />
