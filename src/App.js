@@ -9,7 +9,7 @@ import "./App.sass";
 function App() {
 
   return (
-    <Router basename="/florida-man-files">
+    <Router basename={process.env.PUBLIC_URL}>
       <OverlayMenu />
       <Hamburger />
       <Switch>
