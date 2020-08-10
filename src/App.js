@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Case from "./components/Case";
 import Hamburger from "./components/Hamburger";
@@ -9,7 +9,7 @@ import "./App.sass";
 function App() {
 
   return (
-    <Router>
+    <BrowserRouter basename="/florida-man-files">
       <OverlayMenu />
       <Hamburger />
       <Switch>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/case/:id" component={Case} />
         <Route exact path='*' component={Home} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 
