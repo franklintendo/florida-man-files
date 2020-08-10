@@ -9,7 +9,7 @@ import "./App.sass";
 function App() {
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <OverlayMenu />
       <Hamburger />
       <Switch>
