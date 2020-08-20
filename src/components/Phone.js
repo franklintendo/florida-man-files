@@ -39,10 +39,11 @@ function Phone({video: {video}}) {
         <div className="florida__case-file--phone">
             <p onClick={closeVideo} className="florida__case-file--phone-close-btn d-none">x</p>
             <img onClick={playVideo} className="florida__case-file--phone-play-btn" src={require('../img/play-btn.png')} alt="play button" />
-            <video key={video} id="incident-video" className="florida__case-file--phone-video d-none" controls="controls">
+            <video key={video} id="incident-video" className="florida__case-file--phone-video d-none" controls="controls" playsInline>
                 <source src={require(`../video/${video}.avi`)} type="video/avi"></source>
                 <source src={require(`../video/${video}.webm`)} type="video/webm"></source>
                 <source src={require(`../video/${video}.ogv`)} type="video/ogg"></source>
+                <source src={require(`../video/${video}.mp4`)} type="video/mp4"></source>
                 Your browser does not support HTML video.
             </video>
             <img className="florida__case-file--phone-img" src={require('../img/phone.png')} alt="phone" />
